@@ -24,7 +24,7 @@ const HeroSection = () => {
         <div className="text-center mb-12">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            India's <span className="gradient-saffron bg-clip-text text-transparent">Trusted</span>
+            India's <span className="text-white">Trusted</span>
             <br />
             Vehicle Marketplace
           </h1>
