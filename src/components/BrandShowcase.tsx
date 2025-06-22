@@ -2,24 +2,35 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import MarutiLogo from './logos/MarutiLogo';
+import HyundaiLogo from './logos/HyundaiLogo';
+import TataLogo from './logos/TataLogo';
+import MahindraLogo from './logos/MahindraLogo';
+import HondaLogo from './logos/HondaLogo';
+import ToyotaLogo from './logos/ToyotaLogo';
+import HeroLogo from './logos/HeroLogo';
+import BajajLogo from './logos/BajajLogo';
+import TvsLogo from './logos/TvsLogo';
+import RoyalEnfieldLogo from './logos/RoyalEnfieldLogo';
+import YamahaLogo from './logos/YamahaLogo';
 
 const BrandShowcase = () => {
   const carBrands = [
-    { name: 'Maruti Suzuki', logo: '🚗', count: '45,000+', color: 'text-blue-600' },
-    { name: 'Hyundai', logo: '🚙', count: '25,000+', color: 'text-red-600' },
-    { name: 'Tata', logo: '🚕', count: '18,000+', color: 'text-purple-600' },
-    { name: 'Mahindra', logo: '🚐', count: '12,000+', color: 'text-orange-600' },
-    { name: 'Honda', logo: '🚗', count: '15,000+', color: 'text-gray-600' },
-    { name: 'Toyota', logo: '🚙', count: '8,000+', color: 'text-red-500' },
+    { name: 'Maruti Suzuki', logo: <MarutiLogo className="w-12 h-12" />, count: '45,000+', color: 'text-blue-600' },
+    { name: 'Hyundai', logo: <HyundaiLogo className="w-12 h-12" />, count: '25,000+', color: 'text-gray-600' },
+    { name: 'Tata', logo: <TataLogo className="w-12 h-12" />, count: '18,000+', color: 'text-blue-600' },
+    { name: 'Mahindra', logo: <MahindraLogo className="w-12 h-12" />, count: '12,000+', color: 'text-red-600' },
+    { name: 'Honda', logo: <HondaLogo className="w-12 h-12" />, count: '15,000+', color: 'text-red-600' },
+    { name: 'Toyota', logo: <ToyotaLogo className="w-12 h-12" />, count: '8,000+', color: 'text-red-500' },
   ];
 
   const bikeBrands = [
-    { name: 'Hero', logo: '🏍️', count: '30,000+', color: 'text-blue-600' },
-    { name: 'Bajaj', logo: '🛵', count: '22,000+', color: 'text-orange-600' },
-    { name: 'TVS', logo: '🏍️', count: '18,000+', color: 'text-red-600' },
-    { name: 'Royal Enfield', logo: '🏍️', count: '12,000+', color: 'text-green-600' },
-    { name: 'Honda', logo: '🛵', count: '20,000+', color: 'text-gray-600' },
-    { name: 'Yamaha', logo: '🏍️', count: '10,000+', color: 'text-purple-600' },
+    { name: 'Hero', logo: <HeroLogo className="w-12 h-12" />, count: '30,000+', color: 'text-blue-600' },
+    { name: 'Bajaj', logo: <BajajLogo className="w-12 h-12" />, count: '22,000+', color: 'text-orange-600' },
+    { name: 'TVS', logo: <TvsLogo className="w-12 h-12" />, count: '18,000+', color: 'text-red-600' },
+    { name: 'Royal Enfield', logo: <RoyalEnfieldLogo className="w-12 h-12" />, count: '12,000+', color: 'text-green-600' },
+    { name: 'Honda', logo: <HondaLogo className="w-12 h-12" />, count: '20,000+', color: 'text-red-600' },
+    { name: 'Yamaha', logo: <YamahaLogo className="w-12 h-12" />, count: '10,000+', color: 'text-purple-600' },
   ];
 
   return (
@@ -50,7 +61,7 @@ const BrandShowcase = () => {
                 className="hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105 border-2 hover:border-saffron"
               >
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">{brand.logo}</div>
+                  <div className="mb-3 flex justify-center">{brand.logo}</div>
                   <h4 className="font-semibold text-gray-900 mb-2">{brand.name}</h4>
                   <p className={`text-sm font-medium ${brand.color}`}>{brand.count}</p>
                 </CardContent>
@@ -75,7 +86,7 @@ const BrandShowcase = () => {
                 className="hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105 border-2 hover:border-teal"
               >
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">{brand.logo}</div>
+                  <div className="mb-3 flex justify-center">{brand.logo}</div>
                   <h4 className="font-semibold text-gray-900 mb-2">{brand.name}</h4>
                   <p className={`text-sm font-medium ${brand.color}`}>{brand.count}</p>
                 </CardContent>
