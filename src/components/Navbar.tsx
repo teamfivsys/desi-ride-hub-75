@@ -27,7 +27,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/22816ac1-3816-43fd-9e2b-1b1def32a4ba.png" 
+              src="/lovable-uploads/84a911ba-1de9-4ce3-94e7-40fa3bbec617.png" 
               alt="DesiRide Logo" 
               className="h-10 w-auto"
             />
