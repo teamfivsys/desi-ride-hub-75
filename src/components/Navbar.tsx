@@ -26,9 +26,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="text-2xl font-bold gradient-saffron bg-clip-text text-transparent">
-              🏍️ DesiRide
-            </div>
+            <img 
+              src="/lovable-uploads/22816ac1-3816-43fd-9e2b-1b1def32a4ba.png" 
+              alt="DesiRide Logo" 
+              className="h-10 w-auto"
+            />
             <Badge variant="secondary" className="hidden sm:inline-flex">
               Hub
             </Badge>
