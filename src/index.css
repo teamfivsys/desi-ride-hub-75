@@ -1,6 +1,10 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Google Fonts for Indian context */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
@@ -15,7 +19,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 20 95% 55%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -36,48 +40,42 @@
 
     --radius: 0.5rem;
 
+    /* Indian-inspired colors */
+    --saffron: 20 95% 55%;
+    --deep-orange: 16 100% 50%;
+    --teal: 174 100% 29%;
+    --gold: 45 100% 51%;
+    --verified-green: 142 76% 36%;
+    --premium-blue: 217 91% 60%;
+    --trust-green: 120 100% 25%;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
+    --primary: 20 95% 55%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -99,5 +97,78 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-hindi {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+
+  .gradient-saffron {
+    background: linear-gradient(135deg, hsl(var(--saffron)) 0%, hsl(var(--deep-orange)) 100%);
+  }
+
+  .gradient-teal {
+    background: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--verified-green)) 100%);
+  }
+
+  .text-saffron {
+    color: hsl(var(--saffron));
+  }
+
+  .text-teal {
+    color: hsl(var(--teal));
+  }
+
+  .text-verified {
+    color: hsl(var(--verified-green));
+  }
+
+  .bg-saffron {
+    background-color: hsl(var(--saffron));
+  }
+
+  .bg-teal {
+    background-color: hsl(var(--teal));
+  }
+
+  .border-saffron {
+    border-color: hsl(var(--saffron));
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
